@@ -1,0 +1,18 @@
+﻿@model IEnumerable<User>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to the Todo List App</h1>
+    <p>Either create an account or login to add to a todo list.</p>
+</div>
+
+<h2>Create an Account</h2>
+<form method="post" action="/home/SaveUser">
+    @Html.DisplayNameFor(model => model.Email):
+    <input type="text" name="Email" /><br />
+    @Html.DisplayNameFor(model => model.Password):
+    <input type="text" name="Password" /><br />
+    <input type="submit" />
+</form>
